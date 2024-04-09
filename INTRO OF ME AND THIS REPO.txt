@@ -1,0 +1,23 @@
+# Introduction of me:
+    My name is Cecilia Xu(Wenwen Xu), I'm an enrolled graduate student of Fudan University, Atmospheric and Oceanic Science Department.
+    Majoring in Atmospheric Science, I used NCL(NCAR Command Language), python, R and MATLAB to carry my research of "Characterization of the evolution of surface runoff and soil water content in the Huaihe River Basin over the past 40 years" and "Study of shallow sea water temperature changes under global warming".
+    I have the experience of analyzing CMIP data, CMADS data set, various types of in-situ observation data and assimilated data, etc.
+    The process of data analyzing and offering useful suggestions to solve various problem is challenging but enjoyable.
+    So for my future career, I'm expecting to learn and grow in the field of data analysis. 
+
+# Introdcution of this repository
+    Mainly consists of the notes of business data analytics, including Excel, SQL, Python, Tableau, Principles of Statistics, and some business projects.
+    If you have any question in any file in this repo, feel free to leave an "Issue" on github or contact me through mail: 22213020029@m.fudan.edu.cn
+    Thank you for your time!
+
+# 自我介绍：
+    我叫 Cecilia Xu（徐文文），是复旦大学大气与海洋科学系在读研究生。
+    我的研究方向为大气科学，曾使用NCL（NCAR命令语言）、python、R和MATLAB等工具开展 "淮河流域近40年地表径流和土壤含水量演变特征研究 "和 "全球变暖条件下浅层海水温度变化研究"。
+    我有分析 CMIP 数据、CMADS 数据集、各类原位观测数据和同化数据等的经验。
+    分析数据并为解决各种问题提供有用建议的过程充满挑战，但也很愉快。
+    因此，对于我未来的职业生涯，我希望能在数据分析领域学习和成长。
+
+# 本资料库介绍
+    主要包括商业数据分析笔记，包括 Excel、SQL、Python、Tableau、统计学原理和一些商业项目。
+    如果你对本资源库中的任何文件有任何疑问，请随时在 github 上留下 "问题 "或通过邮件联系我： 22213020029@m.fudan.edu.cn
+    感谢您的宝贵时间！
