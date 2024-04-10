@@ -1,0 +1,4 @@
+保存所有修改 git add .
+提交到暂存区 git commit -m "message"
+推送到远程repo git push -u origin main(push前要先从远程拉取)
+从远程repo拉取 git pull origin main
