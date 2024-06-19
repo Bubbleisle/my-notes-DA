@@ -1,0 +1,105 @@
+语法结构：select---from---where---group by---having---order by---limit
+运行顺序：from---where---group by---having---order by---limit---select
+
+一、基础语句:SELECT, FROM, WHERE
+    select * from ()                                    #选择所有列
+
+    select () from ()
+    where ()=''                                         #匹配字段
+    
+    selcet () form ()
+    where () IN ('','','','')                           #匹配多个字段
+
+    select () form ()
+    where () between 100 and 200                        #按照范围选择
+
+    select () as () from () ==== select () () from ()   #取别名，as可以省略为空格
+
+    select distinct () from ()                          #去重
+    select distinct (),() from ()                       #多列去重
+
+    select (A), (B), (C),(A)/(B) (D) from ()            #多选、做除法、取别名
+
+    select () form ()
+    where () like 'C%ia'                               #like 为模糊查询，查询第一位为C，最后两位为ia，中间模糊查询----%为通配符，匹配任意字段出现的任意次数，但注意，不会匹配null
+
+    select () from ()
+    where () like '_t%'                                #查询第二位字母为t---下划线_为占位符
+
+    select () from ()
+    where name like '%o__o%'                            #查询有两个o，中间有两个字符隔开的名字
+
+    select name, area from country
+    where name like '%a%a%a' and area >=600000          #查询名称有3个a，同时面积大于600000
+
+    select name, area from country
+    where name like '%a%a%a' and area >=600000 
+    or population >1300000000 and area >=5000000        #and的优先级大于or 并且可以加括号隔开 （a and b） or (c and d)
+
+    select * from nobel
+    where(subject ='Medicine' and yr<1910) or (subject='Literature' and yr>=2004)
+一、基础语句：ORDER BY， LIMIT， GRUOP BY，Having
+    ORDER BY 默认升序
+        order by asc：按照升序排
+        order by desc:按照降序排
+        order by subject in('chemimstry', 'physiccs'), subject, winner      #subject in 指匹配项为1，其余为0，按照asc排序，所以先排匹配项，再按subject和winner排序
+    LIMIT：限制输出的数量
+        order by area desc
+        limit 3                                                             #按照面积降序，排除前三名
+
+        order by area desc
+        limit 3,4                                                           #按照面积降序，从第3+1，也就是从第四行开始排，排到第七行，一共4个数据，！limit只能在mySQL中使用
+
+        select * from nobel
+        limit 99,20                                                         #列出第100行到200行的数据
+    GROUP BY：根据词条分区，然后去重分组
+        select sum(population) from world
+        where continent='Africa'                                            #计算非洲总人口数
+        ！聚合函数如果使用的话，只能单独使用，如果要select聚合函数和列名称，必须和GROUP BY 一起使用
+
+        select count(name) from world                                       #计算有多少个国家
+
+        select continent, count(name) form world                            #计算每个大洲有多少个国家
+        group by continent 
+
+        select yr,subject,count(winner) from nobel
+        where yr between 2013 and 2015
+        group by yr,subject
+        order by yr desc,subject,count(winner) desc
+
+        ！group by会按照顺序进行分区，因此1，2 和2，1的顺序不一样
+        ！select只能使用聚合函数和Group by提到的列（非聚合数据），否则会报错  因为运行顺序，Group by已经把数据定好，select是选择是否展示出来
+
+
+！SQL运算符
+    = 
+    > 
+    < 
+    >= 
+    <= 
+    != 
+    between...and...                                    #底层逻辑是and
+    in                                                  #底层逻辑是or
+    not in
+    is null                                             #注意，null是空值还是字符串，如果是字符串需要写 ='null'
+    is not null
+    and
+    or
+    not
+ 
+！SQL聚合函数                             #无法使用通配符
+    SUM()
+    COUNT()                              #count会跳过null
+    MAX()
+    MIN()
+    AVG()
+
+
+
+    
+
+
+
+
+二、高级语句
+三、云端数据库配置
